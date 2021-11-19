@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss"; 
+
+$primaryColor : #f06406;
+
+.g-btn{
+        background: $primaryColor; 
+        color: white;
+        outline: none;
+        border: none;
+        padding: 5px 8px;
+        border-radius: 5px;
+        font-family: 'Carter One', cursive;
+}
+
+
+.navbar{
+    top: 0;
+    left: 0;
+    border-bottom: 2px solid rgb(223, 221, 221);
+    img{
+        height: 50px;
+    }
+    h3{
+        font-family: 'Carter One', cursive;
+        margin-top: 10px;
+        a{
+            color: black;
+            text-decoration: none;
+        }
+    }
+    .navbar-nav{
+        text-align: center;
+        .nav-link{
+            position: relative;
+            color: rgb(131, 130, 130);
+            font-weight: 100;
+            font-size: 19px;
+            font-family: 'Carter One', cursive;
+            transition: .3s ease;
+           &:hover{
+               color: $primaryColor;
+           }
+           span{
+               position: absolute;
+               top: 4px;
+               background: $primaryColor;
+           }
+        }
+    }
+    .navbar-toggler{
+        border: none;
+        color: transparent;
+        #btn{
+          font-size: 1.1rem;
+        }
+    }
+}
+
+#home{
+    background-image: url(../images/bg2.svg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    color: black;
+    font-family: 'Carter One', cursive;
+
+    h6{
+        font-size: 18px;
+    }
+    h3{
+        font-size: 2.7rem;
+    }
+    h3 span{
+        color: $primaryColor;
+    }
+    p{
+        color: rgb(119, 118, 118);
+        font-size: 16px;
+        text-transform: capitalize;
+    }
+    .home-btn{
+        font-size: 13px;
+        padding: 5px 9px;
+    }
+   
+}
+
+#sponsors{
+    margin-top: 50px;
+    img{
+        height: 150px;
+    }
+}
+
+#main{
+    margin-top: 150px;
+    .brand{
+        position: relative;
+         &:hover .details{
+                cursor: pointer;
+                 background: rgba(240, 100, 6, 0.6);
+                 color: white;
+            }
+        img{
+            width: 98%;
+            height: 450px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 10px;
+            
+        }
+        .details{
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding-top: 20px;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            transition: 0.3s ease;
+           
+            button{
+                background: none;
+                color: black;
+                border: none;
+                border-bottom: 2px solid $primaryColor;
+                outline: none;
+                padding: 5px;
+                &:hover{
+                    color: white;
+                    border-bottom: 2px solid white;
+                }
+            }
+        }
+    }
+}
+
+#featured, #boots, #slides, #shop{
+    .title{
+        h3{
+            position: relative;
+            font-weight: bold;
+            font-family: 'Carter One', cursive;
+            &::before{
+                content: "";
+                position: absolute;
+                width: 60px;
+                height: 2px;
+                bottom: 0;
+                margin: -5px 85px;
+                background: $primaryColor;
+
+            }
+        }
+    }
+    .product{
+        margin-bottom: 20px;
+        &:hover img{
+            opacity: 0.7;
+        }
+        &:hover .p-btn{
+            transform: translateY(0);
+            opacity: 1;
+        }
+        cursor: pointer;
+        .p-btn{
+            background: $primaryColor;
+            color: white;
+            font-family: 'Carter One', cursive;
+            margin-top: 5px;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: 0.3s;
+        }
+        .star{
+            padding: 5px 0;
+         i{
+            color: rgb(241, 181, 28);
+            font-size: .8rem;
+        }
+    }
+ }
+}
+
+#sale{
+    background-image: url(../images/banner.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    color: white;
+       h3{
+           font-family: 'Carter One', cursive; 
+           
+        span{
+        color: $primaryColor;
+    }
+       }
+
+   
+   
+}
+
+#boots{
+   .title{
+    h3{
+        &::before{
+            margin: -5px 80px;
+        }
+    }
+   } 
+   
+}
+
+#shop{
+    .title{
+     h3{
+         &::before{
+             margin: -5px 0;
+         }
+     }
+    } 
+    .product{
+        margin-bottom: 80px;
+        button{
+            background: $primaryColor;
+            color: white;
+            padding: 5px 9px;
+        }
+        img{
+            width: 100%;
+            height: 260px;
+        }
+    }
+ }
+
+
+.pagination{
+    li{
+        a{
+            color: black;
+
+            &:hover, &:focus{
+                background: rgb(218, 217, 217);
+                color: $primaryColor;
+            }
+        }
+    }
+}
+body > nav.container > ul > li.page-item.active > a{
+    background: #444343;
+    border: none;
+}
+
+#about{
+    h2{
+        font-family: 'Carter One', cursive;
+    }
+}
+
+#page-content{
+    h3{
+        font-family: 'Carter One', cursive;
+        color: rgb(75, 75, 75);
+    }
+    p{
+        font-size: 20px;
+    }
+}
+
+.socials {
+    i{
+        cursor: pointer;
+        transition: 0.3s ease;
+
+        &:hover, &:focus{
+            color: $primaryColor;
+        }
+    }
+}
+
+#search{
+    margin: 120px;
+       h4{
+        font-family: 'Carter One', cursive;  
+       }
+    input{
+        width: 270px;
+        height: 50px;
+        outline: none;
+        border: 1px solid rgb(168, 168, 168);
+        border-radius: 5px;
+    }
+}
+
+#details{
+    .details-content{
+        border: 1px solid gray;
+
+        i{
+            font-size: 50px;
+        }
+    }
+}
+
+
+
+footer{
+    background: #222222;
+    .footer-logo{
+        img{
+            height: 70px;
+        }
+    h5{
+        color: $primaryColor;
+        font-family: 'Carter One', cursive;
+    }
+    p, h6{
+        color: white;
+    }
+    ul{
+        li{
+            a{
+                color: white;
+                text-decoration: none;
+                transition: .3s;
+            &:hover{
+                color: rgb(245, 215, 196);
+            }
+            }
+        }
+    }
+    i{
+        color: black;
+        background: white;
+        padding: 5px;
+        border-radius: 40px;
+        margin-right: 15px;
+        cursor: pointer;
+        transition: .3s;
+    &:hover{
+        color: $primaryColor;
+    }
+    }
+    }
+    .copyright{
+        color: white;
+        font-family: 'Carter One', cursive;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .navbar{
+        .navbar-nav{
+            .nav-link{
+                padding-top: 20px;
+            }
+        }
+    }
+    
+}
+@media screen and (max-width: 575px){
+    #shop{
+    .product{
+        img{
+            height: auto;
+        }
+    }
+}
+
+#sponsors{
+    img{
+        height: 100px;
+    }
+}
+
+}
